@@ -108,10 +108,10 @@ venv.bak/
 
 # mkdocs documentation
 /site
-
+db.sqlite
 # mypy
 .mypy_cache/
-
+media/
 # Sublime Text #
 *.tmlanguage.cache
 *.tmPreferences.cache
