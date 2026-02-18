@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Search
+{% endblock %}
+{% block content %}
+{% for blog_article in blog_articles %}
+<a href="{% url 'blog:detail' blog_article.Slug %}" class="block-20"
+   style="background-image: url('{{ blog_article.Image.url }}');">
+</a>
+<a href="{% url 'blog:detail' blog_article.Slug %}">{{blog_article.created_at}}</a></div>
+<div><a href="{% url 'blog:detail' blog_article.Slug %}" class="meta-chat"><span class="icon-chat"></span>
+    {{blog_article.comments.count}}</a></div>
+<h3 class="heading"><a href="{% url 'blog:detail' blog_article.Slug %}">{{ blog_article.Title }}</a></h3>
+<p>{{blog_article.Short_description}}</p>
+<p><a href="{% url 'blog:detail' blog_article.Slug %}" class="btn btn-primary py-2 px-3">Read more</a></p>
+{% endfor %}
+{% endblock %}
