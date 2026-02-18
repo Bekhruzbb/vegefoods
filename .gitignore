@@ -118,7 +118,7 @@ media/
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
-
+.idea
 # sftp configuration file
 sftp-config.json
 
